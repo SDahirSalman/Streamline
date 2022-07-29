@@ -9,7 +9,8 @@ RUN apt-get update && \
     ACCEPT_EULA=Y apt-get upgrade -y && \
     apt-get install -y git
 RUN pip install --upgrade pip
-gcc g++ -qqq
+
+# git gcc g++ -qqq
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
