@@ -1,0 +1,36 @@
+
+
+============================== 2022-08-09 07:59:51.962046 | 3d30d943-0bcf-488b-885e-813974c96d06 ==============================
+[0m07:59:51.962063 [info ] [MainThread]: Running with dbt=1.2.0
+[0m07:59:51.962642 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Salman/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m07:59:51.962809 [debug] [MainThread]: Tracking: tracking
+[0m07:59:52.037813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddb67d4550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddb67f5910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddb67ea5e0>]}
+[0m07:59:52.046953 [info ] [MainThread]: Creating dbt configuration folder at /Users/Salman/.dbt
+[0m08:00:12.758756 [info ] [MainThread]: A project called dbt already exists here.
+[0m08:00:12.777093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddb67747c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddb67f5400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddb67f50d0>]}
+
+
+============================== 2022-08-09 08:00:38.689518 | fdb7777f-86ea-4c96-86e7-367167dec56d ==============================
+[0m08:00:38.689550 [info ] [MainThread]: Running with dbt=1.2.0
+[0m08:00:38.690532 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Salman/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m08:00:38.690726 [debug] [MainThread]: Tracking: tracking
+[0m08:00:38.733248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4d8d4550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4d8f5910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4d8ea5e0>]}
+[0m08:00:40.844360 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/dbt/include/starter_project
+[0m08:01:03.114719 [info ] [MainThread]: Profile dbt written to /Users/Salman/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m08:01:03.116414 [info ] [MainThread]: 
+Your new dbt project "dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:01:03.117453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4d8747c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4d9b9280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4d9b92e0>]}

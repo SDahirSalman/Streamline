@@ -1,0 +1,679 @@
+[2022-08-08 00:05:48,718] {processor.py:163} INFO - Started process (PID=14939) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:05:48,728] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 00:05:48,733] {logging_mixin.py:109} INFO - [2022-08-08 00:05:48,733] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:05:50,254] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:05:50,291] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 1.579 seconds
+[2022-08-08 00:11:27,800] {processor.py:163} INFO - Started process (PID=15012) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:11:27,813] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 00:11:27,823] {logging_mixin.py:109} INFO - [2022-08-08 00:11:27,821] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:11:30,442] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:11:30,463] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 2.716 seconds
+[2022-08-08 00:37:56,560] {processor.py:163} INFO - Started process (PID=15049) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:37:56,566] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 00:37:56,575] {logging_mixin.py:109} INFO - [2022-08-08 00:37:56,575] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:38:09,350] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 00:38:11,840] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 15.353 seconds
+[2022-08-08 01:09:03,900] {processor.py:163} INFO - Started process (PID=15098) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 01:09:03,966] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 01:09:04,018] {logging_mixin.py:109} INFO - [2022-08-08 01:09:04,018] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 01:09:35,055] {logging_mixin.py:109} INFO - [2022-08-08 01:09:34,354] {timeout.py:36} ERROR - Process timed out, PID: 15098
+[2022-08-08 01:09:39,948] {logging_mixin.py:109} INFO - [2022-08-08 01:09:35,964] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 145, in <module>
+    from . import core
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/__init__.py", line 70, in <module>
+    from . import numerictypes as nt
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/numerictypes.py", line 107, in <module>
+    from ._type_aliases import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/_type_aliases.py", line 23, in <module>
+    from numpy.core._dtype import _kind_name
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 15098
+[2022-08-08 01:10:58,832] {processor.py:163} INFO - Started process (PID=15141) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 01:11:00,306] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 01:11:01,712] {logging_mixin.py:109} INFO - [2022-08-08 01:11:01,644] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 01:11:36,303] {logging_mixin.py:109} INFO - [2022-08-08 01:11:34,696] {timeout.py:36} ERROR - Process timed out, PID: 15141
+[2022-08-08 01:11:37,868] {logging_mixin.py:109} INFO - [2022-08-08 01:11:36,863] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 156, in <module>
+    from . import random
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/random/__init__.py", line 179, in <module>
+    from . import _pickle
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/random/_pickle.py", line 6, in <module>
+    from ._generator import Generator
+  File "_generator.pyx", line 1, in init numpy.random._generator
+  File "<frozen importlib._bootstrap>", line 194, in _lock_unlock_module
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 15141
+[2022-08-08 01:45:30,296] {processor.py:163} INFO - Started process (PID=15273) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 01:45:34,078] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 01:45:35,428] {logging_mixin.py:109} INFO - [2022-08-08 01:45:35,427] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:01:11,978] {logging_mixin.py:109} INFO - [2022-08-08 02:01:11,971] {timeout.py:36} ERROR - Process timed out, PID: 15273
+[2022-08-08 02:01:12,452] {logging_mixin.py:109} WARNING - Exception ignored in: <module 'collections.abc' from '/usr/local/lib/python3.7/collections/abc.py'>
+[2022-08-08 02:01:12,465] {logging_mixin.py:109} WARNING - Traceback (most recent call last):
+[2022-08-08 02:01:12,476] {logging_mixin.py:109} WARNING -   File "<string>", line 1, in <module>
+[2022-08-08 02:01:12,490] {logging_mixin.py:109} WARNING -   File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+[2022-08-08 02:01:12,504] {logging_mixin.py:109} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2022-08-08 02:01:12,510] {logging_mixin.py:109} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 15273
+[2022-08-08 02:01:20,247] {processor.py:163} INFO - Started process (PID=15305) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:01:20,285] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 02:01:20,305] {logging_mixin.py:109} INFO - [2022-08-08 02:01:20,305] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:01:52,679] {logging_mixin.py:109} INFO - [2022-08-08 02:01:50,711] {timeout.py:36} ERROR - Process timed out, PID: 15305
+[2022-08-08 02:02:03,552] {logging_mixin.py:109} INFO - [2022-08-08 02:01:54,115] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 145, in <module>
+    from . import core
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/__init__.py", line 72, in <module>
+    from . import numeric
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/numeric.py", line 23, in <module>
+    from . import shape_base
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/shape_base.py", line 11, in <module>
+    from ._asarray import array, asanyarray
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/_asarray.py", line 286, in <module>
+    )(asfortranarray)
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 189, in decorator
+    verify_matching_signatures(implementation, dispatcher)
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 95, in verify_matching_signatures
+    implementation_spec = ArgSpec(*getargspec(implementation))
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/compat/_inspect.py", line 110, in getargspec
+    args, varargs, varkw = getargs(func.__code__)
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/compat/_inspect.py", line 78, in getargs
+    names = co.co_varnames
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 15305
+[2022-08-08 02:02:36,290] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:22:59,968] {processor.py:163} INFO - Started process (PID=15458) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:23:00,107] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 02:23:00,158] {logging_mixin.py:109} INFO - [2022-08-08 02:23:00,158] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:23:31,030] {logging_mixin.py:109} INFO - [2022-08-08 02:23:30,777] {timeout.py:36} ERROR - Process timed out, PID: 15458
+[2022-08-08 02:23:31,769] {logging_mixin.py:109} INFO - [2022-08-08 02:23:31,096] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 145, in <module>
+    from . import core
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/__init__.py", line 72, in <module>
+    from . import numeric
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/numeric.py", line 681, in <module>
+    def correlate(a, v, mode='valid'):
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 202, in decorator
+    source, filename='<__array_function__ internals>', mode='exec')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 15458
+[2022-08-08 02:23:34,162] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 02:23:36,302] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 36.740 seconds
+[2022-08-08 06:06:52,371] {processor.py:163} INFO - Started process (PID=48) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:06:52,376] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:06:52,378] {logging_mixin.py:109} INFO - [2022-08-08 06:06:52,378] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:06:54,934] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:06:54,952] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 2.598 seconds
+[2022-08-08 06:07:25,527] {processor.py:163} INFO - Started process (PID=98) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:07:25,531] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:07:25,538] {logging_mixin.py:109} INFO - [2022-08-08 06:07:25,538] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:07:29,137] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:07:29,156] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 3.782 seconds
+[2022-08-08 06:08:00,115] {processor.py:163} INFO - Started process (PID=160) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:08:00,118] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:08:00,121] {logging_mixin.py:109} INFO - [2022-08-08 06:08:00,121] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:08:00,576] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:08:00,581] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.470 seconds
+[2022-08-08 06:08:31,413] {processor.py:163} INFO - Started process (PID=221) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:08:31,425] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:08:31,427] {logging_mixin.py:109} INFO - [2022-08-08 06:08:31,426] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:08:31,871] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:08:31,883] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.474 seconds
+[2022-08-08 06:09:02,696] {processor.py:163} INFO - Started process (PID=292) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:09:02,700] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:09:02,703] {logging_mixin.py:109} INFO - [2022-08-08 06:09:02,702] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:09:03,037] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:09:03,042] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.357 seconds
+[2022-08-08 06:09:33,193] {processor.py:163} INFO - Started process (PID=354) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:09:33,195] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:09:33,198] {logging_mixin.py:109} INFO - [2022-08-08 06:09:33,197] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:09:33,568] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:09:33,572] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.382 seconds
+[2022-08-08 06:10:04,545] {processor.py:163} INFO - Started process (PID=424) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:10:04,548] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:10:04,550] {logging_mixin.py:109} INFO - [2022-08-08 06:10:04,550] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:10:04,869] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:10:04,873] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.335 seconds
+[2022-08-08 06:10:34,988] {processor.py:163} INFO - Started process (PID=484) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:10:34,991] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:10:34,995] {logging_mixin.py:109} INFO - [2022-08-08 06:10:34,995] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:10:35,738] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:10:35,745] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.762 seconds
+[2022-08-08 06:11:06,402] {processor.py:163} INFO - Started process (PID=555) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:11:06,405] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:11:06,407] {logging_mixin.py:109} INFO - [2022-08-08 06:11:06,407] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:11:06,807] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:11:06,813] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.415 seconds
+[2022-08-08 06:11:37,552] {processor.py:163} INFO - Started process (PID=615) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:11:37,555] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:11:37,557] {logging_mixin.py:109} INFO - [2022-08-08 06:11:37,557] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:11:37,902] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:11:37,907] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.363 seconds
+[2022-08-08 06:12:08,143] {processor.py:163} INFO - Started process (PID=684) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:12:08,147] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:12:08,149] {logging_mixin.py:109} INFO - [2022-08-08 06:12:08,149] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:12:08,459] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:12:08,465] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.348 seconds
+[2022-08-08 06:12:38,817] {processor.py:163} INFO - Started process (PID=744) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:12:38,820] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:12:38,822] {logging_mixin.py:109} INFO - [2022-08-08 06:12:38,822] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:12:39,172] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:12:39,177] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.365 seconds
+[2022-08-08 06:13:09,241] {processor.py:163} INFO - Started process (PID=816) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:13:09,244] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:13:09,246] {logging_mixin.py:109} INFO - [2022-08-08 06:13:09,246] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:13:09,639] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:13:09,647] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.410 seconds
+[2022-08-08 06:13:39,805] {processor.py:163} INFO - Started process (PID=874) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:13:39,808] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:13:39,809] {logging_mixin.py:109} INFO - [2022-08-08 06:13:39,809] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:13:40,212] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:13:40,217] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.417 seconds
+[2022-08-08 06:14:10,509] {processor.py:163} INFO - Started process (PID=943) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:14:10,511] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:14:10,513] {logging_mixin.py:109} INFO - [2022-08-08 06:14:10,513] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:14:10,893] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:14:10,899] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.395 seconds
+[2022-08-08 06:14:41,189] {processor.py:163} INFO - Started process (PID=1004) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:14:41,193] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:14:41,195] {logging_mixin.py:109} INFO - [2022-08-08 06:14:41,195] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:14:41,603] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:14:41,607] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.430 seconds
+[2022-08-08 06:15:12,347] {processor.py:163} INFO - Started process (PID=1075) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:15:12,360] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:15:12,362] {logging_mixin.py:109} INFO - [2022-08-08 06:15:12,362] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:15:12,931] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:15:12,935] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.592 seconds
+[2022-08-08 06:15:43,021] {processor.py:163} INFO - Started process (PID=1137) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:15:43,029] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:15:43,031] {logging_mixin.py:109} INFO - [2022-08-08 06:15:43,031] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:15:43,480] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:15:43,489] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.474 seconds
+[2022-08-08 06:16:13,653] {processor.py:163} INFO - Started process (PID=1199) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:16:13,656] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:16:13,658] {logging_mixin.py:109} INFO - [2022-08-08 06:16:13,658] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:16:13,992] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:16:13,997] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.350 seconds
+[2022-08-08 06:16:44,996] {processor.py:163} INFO - Started process (PID=1271) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:16:44,998] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:16:44,999] {logging_mixin.py:109} INFO - [2022-08-08 06:16:44,999] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:16:45,310] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:16:45,315] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.324 seconds
+[2022-08-08 06:17:15,358] {processor.py:163} INFO - Started process (PID=1332) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:17:15,361] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:17:15,363] {logging_mixin.py:109} INFO - [2022-08-08 06:17:15,363] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:17:15,741] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:17:15,748] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.397 seconds
+[2022-08-08 06:17:46,300] {processor.py:163} INFO - Started process (PID=1404) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:17:46,303] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:17:46,305] {logging_mixin.py:109} INFO - [2022-08-08 06:17:46,305] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:17:46,670] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:17:46,675] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.378 seconds
+[2022-08-08 06:18:16,981] {processor.py:163} INFO - Started process (PID=1465) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:18:16,984] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:18:16,985] {logging_mixin.py:109} INFO - [2022-08-08 06:18:16,985] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:18:17,359] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:18:17,365] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.387 seconds
+[2022-08-08 06:18:47,443] {processor.py:163} INFO - Started process (PID=1537) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:18:47,446] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:18:47,448] {logging_mixin.py:109} INFO - [2022-08-08 06:18:47,448] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:18:47,784] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:18:47,789] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.349 seconds
+[2022-08-08 06:19:18,632] {processor.py:163} INFO - Started process (PID=1598) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:19:18,635] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:19:18,637] {logging_mixin.py:109} INFO - [2022-08-08 06:19:18,637] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:19:19,004] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:19:19,009] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.384 seconds
+[2022-08-08 06:19:49,235] {processor.py:163} INFO - Started process (PID=1668) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:19:49,237] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:19:49,238] {logging_mixin.py:109} INFO - [2022-08-08 06:19:49,238] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:19:49,565] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:19:49,569] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.339 seconds
+[2022-08-08 06:20:19,639] {processor.py:163} INFO - Started process (PID=1731) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:20:19,641] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:20:19,642] {logging_mixin.py:109} INFO - [2022-08-08 06:20:19,642] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:20:20,012] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:20:20,018] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.385 seconds
+[2022-08-08 06:20:50,087] {processor.py:163} INFO - Started process (PID=1798) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:20:50,089] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:20:50,091] {logging_mixin.py:109} INFO - [2022-08-08 06:20:50,091] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:20:50,445] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:20:50,449] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.366 seconds
+[2022-08-08 06:21:20,544] {processor.py:163} INFO - Started process (PID=1858) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:21:20,546] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:21:20,548] {logging_mixin.py:109} INFO - [2022-08-08 06:21:20,547] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:21:21,025] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:21:21,029] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.489 seconds
+[2022-08-08 06:21:51,265] {processor.py:163} INFO - Started process (PID=1929) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:21:51,268] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:21:51,271] {logging_mixin.py:109} INFO - [2022-08-08 06:21:51,270] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:21:51,625] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:21:51,632] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.373 seconds
+[2022-08-08 06:22:22,608] {processor.py:163} INFO - Started process (PID=1989) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:22:22,611] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 06:22:22,612] {logging_mixin.py:109} INFO - [2022-08-08 06:22:22,612] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:22:22,951] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 06:22:22,957] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.353 seconds
+[2022-08-08 07:11:41,879] {processor.py:163} INFO - Started process (PID=2049) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 07:11:41,883] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 07:11:41,886] {logging_mixin.py:109} INFO - [2022-08-08 07:11:41,886] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 07:11:42,493] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 07:11:42,500] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.637 seconds
+[2022-08-08 09:12:19,038] {processor.py:163} INFO - Started process (PID=2106) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:12:19,065] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:12:19,072] {logging_mixin.py:109} INFO - [2022-08-08 09:12:19,072] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:12:21,339] {processor.py:163} INFO - Started process (PID=2114) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:12:21,371] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:12:21,373] {logging_mixin.py:109} INFO - [2022-08-08 09:12:21,372] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:12:22,437] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:12:22,457] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 1.122 seconds
+[2022-08-08 09:16:09,717] {processor.py:163} INFO - Started process (PID=2145) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:16:09,721] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:16:09,724] {logging_mixin.py:109} INFO - [2022-08-08 09:16:09,723] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:16:10,235] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:16:10,249] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 0.543 seconds
+[2022-08-08 09:16:56,185] {processor.py:163} INFO - Started process (PID=2200) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:16:56,643] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:16:56,847] {logging_mixin.py:109} INFO - [2022-08-08 09:16:56,844] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:32:32,101] {logging_mixin.py:109} INFO - [2022-08-08 09:32:32,101] {timeout.py:36} ERROR - Process timed out, PID: 2200
+[2022-08-08 09:32:31,895] {logging_mixin.py:109} INFO - [2022-08-08 09:32:31,846] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 145, in <module>
+    from . import core
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/__init__.py", line 22, in <module>
+    from . import multiarray
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/multiarray.py", line 12, in <module>
+    from . import overrides
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 9, in <module>
+    from numpy.compat._inspect import getargspec
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/compat/__init__.py", line 12, in <module>
+    from . import py3k
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/compat/py3k.py", line 28, in <module>
+    import pickle5 as pickle
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2200
+[2022-08-08 09:32:32,033] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:32:32,115] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 938.224 seconds
+[2022-08-08 09:32:33,848] {processor.py:163} INFO - Started process (PID=2221) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:32:33,860] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:32:33,873] {logging_mixin.py:109} INFO - [2022-08-08 09:32:33,873] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:32:35,689] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:32:35,722] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 1.894 seconds
+[2022-08-08 09:34:42,809] {processor.py:163} INFO - Started process (PID=2280) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:34:42,920] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:34:42,966] {logging_mixin.py:109} INFO - [2022-08-08 09:34:42,966] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:35:13,151] {logging_mixin.py:109} INFO - [2022-08-08 09:35:13,118] {timeout.py:36} ERROR - Process timed out, PID: 2280
+[2022-08-08 09:35:13,440] {logging_mixin.py:109} INFO - [2022-08-08 09:35:13,196] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 148, in <module>
+    from . import lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/__init__.py", line 25, in <module>
+    from .index_tricks import *
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/index_tricks.py", line 13, in <module>
+    from .function_base import diff
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/function_base.py", line 4311, in <module>
+    def delete(arr, obj, axis=None):
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 189, in decorator
+    verify_matching_signatures(implementation, dispatcher)
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 95, in verify_matching_signatures
+    implementation_spec = ArgSpec(*getargspec(implementation))
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/compat/_inspect.py", line 110, in getargspec
+    args, varargs, varkw = getargs(func.__code__)
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/compat/_inspect.py", line 79, in getargs
+    args = list(names[:nargs])
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2280
+[2022-08-08 09:35:14,090] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:35:14,571] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 32.014 seconds
+[2022-08-08 09:44:14,645] {processor.py:163} INFO - Started process (PID=2355) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:44:14,667] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:44:14,699] {logging_mixin.py:109} INFO - [2022-08-08 09:44:14,698] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:58:46,805] {logging_mixin.py:109} INFO - [2022-08-08 09:58:46,765] {timeout.py:36} ERROR - Process timed out, PID: 2355
+[2022-08-08 09:58:47,849] {logging_mixin.py:109} INFO - [2022-08-08 09:58:47,520] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 145, in <module>
+    from . import core
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/__init__.py", line 98, in <module>
+    from . import _add_newdocs
+  File "<frozen importlib._bootstrap>", line 980, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 147, in __enter__
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2355
+[2022-08-08 09:58:49,165] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:58:49,475] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 875.711 seconds
+[2022-08-08 09:59:39,027] {processor.py:163} INFO - Started process (PID=2379) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 09:59:43,281] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 09:59:45,143] {logging_mixin.py:109} INFO - [2022-08-08 09:59:44,891] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:00:25,809] {logging_mixin.py:109} INFO - [2022-08-08 10:00:25,052] {timeout.py:36} ERROR - Process timed out, PID: 2379
+[2022-08-08 10:15:29,633] {logging_mixin.py:109} INFO - [2022-08-08 10:00:27,098] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 8, in <module>
+    from airflow.operators.python import PythonOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 38, in <module>
+    from airflow.utils.python_virtualenv import prepare_virtualenv, write_python_script
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/python_virtualenv.py", line 21, in <module>
+    import sys
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2379
+[2022-08-08 10:17:58,905] {processor.py:163} INFO - Started process (PID=2462) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:17:59,110] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 10:17:59,157] {logging_mixin.py:109} INFO - [2022-08-08 10:17:59,157] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:18:31,690] {logging_mixin.py:109} INFO - [2022-08-08 10:18:30,138] {timeout.py:36} ERROR - Process timed out, PID: 2462
+[2022-08-08 10:18:31,936] {logging_mixin.py:109} INFO - [2022-08-08 10:18:31,696] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 148, in <module>
+    from . import lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/__init__.py", line 25, in <module>
+    from .index_tricks import *
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/index_tricks.py", line 12, in <module>
+    import numpy.matrixlib as matrixlib
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 670, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 589, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 568, in _init_module_attrs
+  File "<frozen importlib._bootstrap>", line 409, in cached
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2462
+[2022-08-08 10:18:33,294] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:18:34,196] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 35.897 seconds
+[2022-08-08 10:19:15,744] {processor.py:163} INFO - Started process (PID=2508) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:19:21,331] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 10:19:22,358] {logging_mixin.py:109} INFO - [2022-08-08 10:19:22,216] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:19:55,663] {logging_mixin.py:109} INFO - [2022-08-08 10:19:55,215] {timeout.py:36} ERROR - Process timed out, PID: 2508
+[2022-08-08 10:20:07,948] {logging_mixin.py:109} INFO - [2022-08-08 10:19:56,761] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 8, in <module>
+    from airflow.operators.python import PythonOperator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 25, in <module>
+    from tempfile import TemporaryDirectory
+  File "<frozen importlib._bootstrap>", line 1019, in _handle_fromlist
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/manager.py", line 496, in _exit_gracefully
+    self.log.debug("Current Stacktrace is: %s", '\n'.join(map(str, inspect.stack())))
+  File "/usr/local/lib/python3.7/inspect.py", line 1513, in stack
+    return getouterframes(sys._getframe(1), context)
+  File "/usr/local/lib/python3.7/inspect.py", line 1490, in getouterframes
+    frameinfo = (frame,) + getframeinfo(frame, context)
+  File "/usr/local/lib/python3.7/inspect.py", line 1464, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/usr/local/lib/python3.7/inspect.py", line 780, in findsource
+    module = getmodule(object, file)
+  File "/usr/local/lib/python3.7/inspect.py", line 742, in getmodule
+    os.path.realpath(f)] = module.__name__
+  File "/usr/local/lib/python3.7/posixpath.py", line 395, in realpath
+    path, ok = _joinrealpath(filename[:0], filename, {})
+  File "/usr/local/lib/python3.7/posixpath.py", line 429, in _joinrealpath
+    if not islink(newpath):
+  File "/usr/local/lib/python3.7/posixpath.py", line 171, in islink
+    st = os.lstat(path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2508
+[2022-08-08 10:20:13,373] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:20:14,355] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 61.045 seconds
+[2022-08-08 10:50:32,971] {processor.py:163} INFO - Started process (PID=2567) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:50:32,974] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 10:50:32,979] {logging_mixin.py:109} INFO - [2022-08-08 10:50:32,979] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:51:05,080] {logging_mixin.py:109} INFO - [2022-08-08 10:51:04,046] {timeout.py:36} ERROR - Process timed out, PID: 2567
+[2022-08-08 10:51:19,515] {logging_mixin.py:109} INFO - [2022-08-08 10:51:05,481] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 148, in <module>
+    from . import lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/__init__.py", line 21, in <module>
+    from . import scimath as emath
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/scimath.py", line 38, in <module>
+    from numpy.lib.type_check import isreal
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/type_check.py", line 16, in <module>
+    from .ufunclike import isneginf, isposinf
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/ufunclike.py", line 200, in <module>
+    def isneginf(x, out=None):
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/core/overrides.py", line 209, in decorator
+    exec(source_object, scope)
+  File "<__array_function__ internals>", line 2, in <module>
+  File "/usr/local/lib/python3.7/functools.py", line 58, in update_wrapper
+    setattr(wrapper, attr, value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2567
+[2022-08-08 10:52:08,519] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:53:39,107] {processor.py:163} INFO - Started process (PID=2650) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:53:46,869] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 10:53:51,312] {logging_mixin.py:109} INFO - [2022-08-08 10:53:51,310] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:54:27,408] {logging_mixin.py:109} INFO - [2022-08-08 10:54:26,889] {timeout.py:36} ERROR - Process timed out, PID: 2650
+[2022-08-08 10:54:36,668] {logging_mixin.py:109} INFO - [2022-08-08 10:54:28,448] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "<frozen importlib._bootstrap>", line 416, in parent
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/manager.py", line 496, in _exit_gracefully
+    self.log.debug("Current Stacktrace is: %s", '\n'.join(map(str, inspect.stack())))
+  File "/usr/local/lib/python3.7/inspect.py", line 1513, in stack
+    return getouterframes(sys._getframe(1), context)
+  File "/usr/local/lib/python3.7/inspect.py", line 1490, in getouterframes
+    frameinfo = (frame,) + getframeinfo(frame, context)
+  File "/usr/local/lib/python3.7/inspect.py", line 1464, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/usr/local/lib/python3.7/inspect.py", line 780, in findsource
+    module = getmodule(object, file)
+  File "/usr/local/lib/python3.7/inspect.py", line 742, in getmodule
+    os.path.realpath(f)] = module.__name__
+  File "/usr/local/lib/python3.7/posixpath.py", line 395, in realpath
+    path, ok = _joinrealpath(filename[:0], filename, {})
+  File "/usr/local/lib/python3.7/posixpath.py", line 429, in _joinrealpath
+    if not islink(newpath):
+  File "/usr/local/lib/python3.7/posixpath.py", line 171, in islink
+    st = os.lstat(path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2650
+[2022-08-08 10:54:39,786] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 10:54:40,998] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 63.288 seconds
+[2022-08-08 11:21:43,119] {processor.py:163} INFO - Started process (PID=2786) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 11:21:43,136] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 11:21:43,199] {logging_mixin.py:109} INFO - [2022-08-08 11:21:43,199] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 11:22:24,847] {logging_mixin.py:109} INFO - [2022-08-08 11:22:15,330] {timeout.py:36} ERROR - Process timed out, PID: 2786
+[2022-08-08 11:27:42,847] {processor.py:163} INFO - Started process (PID=2824) to work on /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 11:27:42,897] {processor.py:642} INFO - Processing file /opt/airflow/dags/source_to_gcs.py for tasks to queue
+[2022-08-08 11:27:42,998] {logging_mixin.py:109} INFO - [2022-08-08 11:27:42,998] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 11:28:13,677] {logging_mixin.py:109} INFO - [2022-08-08 11:28:13,675] {timeout.py:36} ERROR - Process timed out, PID: 2824
+[2022-08-08 11:28:13,731] {logging_mixin.py:109} INFO - [2022-08-08 11:28:13,688] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/source_to_gcs.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/sre_compile.py", line 304, in _optimize_charset
+    charmap[k] = 1
+IndexError: bytearray index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/source_to_gcs.py", line 11, in <module>
+    import pyarrow.csv as pv
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 63, in <module>
+    import pyarrow.lib as _lib
+  File "pyarrow/lib.pyx", line 24, in init pyarrow.lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/__init__.py", line 148, in <module>
+    from . import lib
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/__init__.py", line 35, in <module>
+    from .utils import *
+  File "/home/airflow/.local/lib/python3.7/site-packages/numpy/lib/utils.py", line 662, in <module>
+    _function_signature_re = re.compile(r"[a-z0-9_]+\(.*[,=].*\)", re.I)
+  File "/usr/local/lib/python3.7/re.py", line 236, in compile
+    return _compile(pattern, flags)
+  File "/usr/local/lib/python3.7/re.py", line 288, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/local/lib/python3.7/sre_compile.py", line 768, in compile
+    code = _code(p, flags)
+  File "/usr/local/lib/python3.7/sre_compile.py", line 607, in _code
+    _compile(code, p.data, flags)
+  File "/usr/local/lib/python3.7/sre_compile.py", line 148, in _compile
+    _compile(code, av[2], flags)
+  File "/usr/local/lib/python3.7/sre_compile.py", line 120, in _compile
+    charset, hascased = _optimize_charset(av, iscased, tolower, fixes)
+  File "/usr/local/lib/python3.7/sre_compile.py", line 304, in _optimize_charset
+    charmap[k] = 1
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/source_to_gcs.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2824
+[2022-08-08 11:28:14,867] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/source_to_gcs.py
+[2022-08-08 11:28:15,789] {processor.py:171} INFO - Processing /opt/airflow/dags/source_to_gcs.py took 33.472 seconds
